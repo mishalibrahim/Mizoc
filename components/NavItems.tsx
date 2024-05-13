@@ -3,28 +3,31 @@ import Link from 'next/link';
 import AnimatedText from './AnimatedText';
 import { useState } from 'react';
 
-const NavItems: React.FC = () => {
-  // Initialize an array of hover states, initially all set to false
-  const [hoverStates, setHoverStates] = useState<boolean[]>(Array(navItems.length).fill(false));
+interface HoverState {
+  [key: string]: boolean;
+}
 
-  // Function to handle hover state change for a specific item
-  const handleHoverChange = (index: number, isHovered: boolean): void => {
-    const newHoverStates = [...hoverStates]; // Create a copy of the array
-    newHoverStates[index] = isHovered; // Update the hover state for the specific item
-    setHoverStates(newHoverStates); // Update the state
+const NavItems: React.FC = () => {
+  const [hoverStates, setHoverStates] = useState<HoverState>({});
+
+  const handleHoverChange = (id: string, isHovered: boolean): void => {
+    setHoverStates((prevHoverStates) => ({
+      ...prevHoverStates,
+      [id]: isHovered,
+    }));
   };
 
   return (
     <div className='bg-gray-200/70 flex rounded-full p-1'>
-      {navItems.map((item, index) => (
+      {navItems.map((item,i) => (
         <Link
-          key={index}
+          key={i}
           href={item.href}
-          onMouseEnter={() => handleHoverChange(index, true)} // Set hover state to true on mouse enter
-          onMouseLeave={() => handleHoverChange(index, false)} // Set hover state to false on mouse leave
+          onMouseEnter={() => handleHoverChange(item.id, true)}
+          onMouseLeave={() => handleHoverChange(item.id, false)}
           className='flex-center text-black px-5 hover:bg-white rounded-full'
         >
-          <AnimatedText hover={hoverStates[index]} title={item.title} /> {/* Pass the hover state for the specific item */}
+          <AnimatedText hover={hoverStates[item.id]} title={item.title} />
         </Link>
       ))}
     </div>
