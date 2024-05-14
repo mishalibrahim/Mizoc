@@ -7,7 +7,7 @@ interface HoverState {
   [key: string]: boolean;
 }
 
-const NavItems: React.FC = () => {
+const NavItems = ({scroll,active}:{scroll:boolean,active:string}) => {
   const [hoverStates, setHoverStates] = useState<HoverState>({});
 
   const handleHoverChange = (id: string, isHovered: boolean): void => {
@@ -18,14 +18,14 @@ const NavItems: React.FC = () => {
   };
 
   return (
-    <div className='bg-gray-200/70 flex rounded-full p-1'>
+    <div className={`bg-gray-200/70 flex rounded-full p-1 ${scroll && 'bg-white'}`}>
       {navItems.map((item,i) => (
         <Link
           key={i}
           href={item.href}
           onMouseEnter={() => handleHoverChange(item.id, true)}
           onMouseLeave={() => handleHoverChange(item.id, false)}
-          className='flex-center text-black px-5 hover:bg-white rounded-full'
+          className={`flex-center text-black px-5 hover:bg-white ${active === item.route && 'bg-gray-500/20'} rounded-full ${scroll && 'hover:bg-gray-500/20'}`}
         >
           <AnimatedText hover={hoverStates[item.id]} title={item.title} />
         </Link>
