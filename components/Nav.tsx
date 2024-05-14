@@ -36,8 +36,8 @@ const Nav = () => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
     return (
-        <header className={`w-full flex flex-col h-[60px] top-0 ${isScrolling && 'md:h-[40px] md:top-7'} 
-        fixed  transition-all ease-in-out duration-700  z-30 lg:px-5 items-center bg-gradient-to-b from-[#ffffffb9] to-[#ffffff12]`}>
+        <header className={`w-full flex flex-col   top-0 ${isScrolling && ' md:top-7'} 
+        fixed  transition-all ease-in-out duration-700  z-30 lg:px-5 items-center bg-gradient-to-b from-[#ffffffe3] to-[#ffffff00] md:bg-gradient md:from-transparent`}>
             <div className={`flex items-center justify-between transition-all duration-700  wrapper
                  ${isScrolling && 'md:w-[70vw] md:h-[60px] rounded-full md:px-10 md:py-1 md:bg-[#53275312] md:backdrop-blur-[16px]'} `}>
                 <div className='w-[100px]'>
@@ -45,7 +45,7 @@ const Nav = () => {
                         <Image src='/assets/images/miszocLogo.png' width={50} height={60} alt='logo' className='object-cover w-full ' />
                     </div>
                 </div>
-                <nav className='md:flex hidden h-full'>
+                <nav className='md:flex hidden h-[55px]'>
                     <NavItems scroll={isScrolling} active={isActive} />
                 </nav>
                 <div className='hidden md:flex-center round-dot relative'>
