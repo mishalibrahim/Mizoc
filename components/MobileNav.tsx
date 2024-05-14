@@ -15,7 +15,7 @@ const MobileNav = ({active}:{active:boolean}) => {
     <>
     {
 
-        <div id='nav-open' className='fixed h-full w-full z-40 bg-primary top-0 translate-y-[100vh]  opacity-0'>
+        <div id='nav-open' className='fixed h-full w-full z-40 bg-primary top-0 translate-y-[-100vh]  opacity-0'>
         <div className='flex justify-center h-full flex-col p-10'>
             {
                 mobileNavItems.map((item,index)=>(
