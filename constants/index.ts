@@ -15,7 +15,7 @@ export const navItems =[
         id:'2',
         title:'Why Choose us',
         href:'#whyChooseUs',
-        route:'whychoose-us'
+        route:'why-choose-us'
     }
 ]
 export const mobileNavItems =[
