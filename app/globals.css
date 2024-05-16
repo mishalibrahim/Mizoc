@@ -41,4 +41,7 @@ body {
     text-wrap: balance;
   }
 
+  .grid-item {
+    @apply lg:px-[27px] p-3 lg:py-[22px] flex flex-col gap-[7px] border border-black/20 bg-gradient-to-b from-[#fff] from-60% to-primary/10 to-[93%] sm:min-h-[270px] rounded-xl
+  }
 }
