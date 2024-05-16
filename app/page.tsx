@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import OurServices from "@/components/OurServices";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main className="w-full h-full">
       <Hero />
       <OurServices />
+      <WhyChooseUs/>
     </main>
   );
 }

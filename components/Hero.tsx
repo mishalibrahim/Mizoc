@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const Hero = () => {
+  
   return (
     <section id='hero' className='w-full my-[100px]  rounded-tl-[100px] rounded-br-[100px] bg-light'>
       <div className='wrapper  h-full'>
@@ -16,7 +17,7 @@ const Hero = () => {
             </div>
           </div>
           <div className='lg:flex-1 flex-center '>
-            <div className='relative min-h-[400px] md:min-h-[600px] w-[300px]'>
+            <div className='relative min-h-[400px] sm:min-h-[600px] w-[300px]'>
             <div className='sm:w-[280px] sm:h-[502px] w-[200px] h-[400px] sm:translate-x-[-2.5rem] translate-y-[-2rem] top-0 sm:bottom-0 sm:my-auto left-0  bg-primary rounded-tl-[100px] absolute'></div>
             <div className='absolute  top-0 sm:bottom-0 sm:my-auto  left-0 z-10 sm:w-[330px]  sm:h-[490px] w-[250px] h-auto translate-x-10 sm:translate-x-10 translate-y-8'>
             <Image className=' object-cover ' src='/assets/images/heroImage.png' width={330} height={490} alt='hero' />
