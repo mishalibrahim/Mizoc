@@ -5,6 +5,7 @@ import OurServices from "@/components/OurServices";
 export default function Home() {
   return (
     <main className="w-full h-full">
+      <div className="fixed h-[100vh] w-full bg-gradient-to-b from-transparent to-80% to-white top-0 z-[-10]"></div>
       <Hero />
       <OurServices />
       <AboutUs />
