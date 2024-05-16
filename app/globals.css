@@ -18,22 +18,30 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  background-image: linear-gradient(to right, #e8e8e8 1px, transparent 1px), linear-gradient(to bottom, #e8e8e8 1px, transparent 1px);
+  background-size: 100px 100px;
+  min-height: 100vh;
+
 }
 
 @layer utilities {
-  .flex-center{
+  .flex-center {
     @apply flex items-center justify-center
   }
+
   .wrapper {
-    @apply max-w-[90rem] xl:mx-auto p-5 md:px-10 lg:px-11  w-full; 
-  } 
-  .round-dot{
+    @apply max-w-[90rem] xl:mx-auto p-5 md:px-10 lg:px-11 w-full;
+  }
+
+  .round-dot {
     @apply before:content-[""] before:w-[8px] before:h-[8px] before:rounded-full before:bg-black before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:my-auto before:mr-auto;
   }
+
   .text-balance {
     text-wrap: balance;
   }
-  .grid-item{
-    @apply lg:px-[27px] p-3 lg:py-[22px] flex flex-col gap-[7px] border border-black/20 bg-gradient-to-b from-[#fff] from-60% to-primary/10 to-[93%] sm:min-h-[270px] rounded-xl 
+
+  .grid-item {
+    @apply lg:px-[27px] p-3 lg:py-[22px] flex flex-col gap-[7px] border border-black/20 bg-gradient-to-b from-[#fff] from-60% to-primary/10 to-[93%] sm:min-h-[270px] rounded-xl
   }
 }
