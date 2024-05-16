@@ -49,4 +49,9 @@ export const services = [
     image: "/assets/images/service2.png",
     description: "  Discover our tailored solutions for Mechanical, Electrical, and Plumbing sectors, designed to meet the unique needs of each project."
 },
+{
+    title: "EV Products and Automobile Spare Parts",
+    image: "/assets/images/service3.jpeg",
+    description: "Access high-quality components for Electric Vehicles and essential spare parts to ensure the performance and longevity of your vehicles."
+},
 ]
