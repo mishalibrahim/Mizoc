@@ -19,6 +19,9 @@ const config: Config = {
       colors:{
         primary:'#532753',
         light:'#FAF9F9'
+      },
+      gridTemplateColumns:{
+        '5': 'repeat(5, minmax(0, 1fr))'
       }
     },
   },

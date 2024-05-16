@@ -3,7 +3,7 @@ import ServiceCard from "./ServiceCard";
 
 const OurServices = () => {
   return (
-    <section id="our-services">
+    <section id="our-services" className="sm:mt-[100px]">
       <h2 className="text-4xl font-medium text-primary ms-5 sm:text-center sm:ms-0">
         Our Services
       </h2>
