@@ -10,7 +10,7 @@ type ServiceCardProps = {
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
-    <div className="relative group w-[100%] h-[550px] sm:w-[24rem] sm:h-[550px] sm:mx-8 mx-5 my-10 rounded-xl hover:scale-105  transition-all duration-500 overflow-hidden">
+    <div className="relative group w-[100%] h-[550px] sm:w-[24rem] sm:h-[550px]  my-10 rounded-xl hover:scale-105  transition-all duration-500 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full rounded-[inherit]">
         <Image
           src={service.image}
