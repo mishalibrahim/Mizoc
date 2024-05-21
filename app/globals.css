@@ -21,7 +21,7 @@ body {
   background-image: linear-gradient(to right, #e8e8e8 1px, transparent 1px), linear-gradient(to bottom, #e8e8e8 1px, transparent 1px);
   background-size: 100px 100px;
   min-height: 100vh;
-
+  position: relative;
 }
 
 @layer utilities {
@@ -43,5 +43,11 @@ body {
 
   .grid-item {
     @apply lg:px-[27px] p-3 lg:py-[22px] flex flex-col gap-[7px] border border-black/20 bg-gradient-to-b from-[#fff] from-60% to-primary/10 to-[93%] sm:min-h-[270px] rounded-xl
+  }
+  .form-input{
+    @apply w-full h-full text-white placeholder:text-white px-2 bg-transparent border-2 border-white  rounded-[20px] ring-offset-0 outline-0
+  }
+  .form-textarea{
+    @apply    w-full h-full text-white placeholder:text-white px-2 py-4 bg-transparent border-2 border-white  rounded-[20px] ring-offset-0 outline-0
   }
 }

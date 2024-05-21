@@ -55,3 +55,17 @@ export const services = [
     description: "Access high-quality components for Electric Vehicles and essential spare parts to ensure the performance and longevity of your vehicles."
 },
 ]
+export const socialLinks =[
+    {
+        src:'/assets/images/linkedin.png',
+        link:''
+    },
+    {
+        src:'/assets/images/facebook.png',
+        link:'',
+    },
+    {
+        src:'/assets/images/instagram.png',
+        link:''
+    }
+]
