@@ -5,7 +5,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className='relative bottom-0 rounded-t-[40px] overflow-hidden z-30 bg-gradient-to-b from-primary from-0% to-[#532753] to-100% '>
+        <footer className='relative bottom-0 rounded-t-[40px] overflow-hidden z-20 bg-gradient-to-b from-primary from-0% to-[#532753] to-100% '>
             <div className='absolute z-[-10] h-full  bg-no-repeat bg-cover mix-blend-color-burn w-full bg-[url("/assets/images/footer-bg.svg")] bg-primary'></div>
             <div className='wrapper '>
                 <div className='flex justify-between sm:flex-row flex-col sm:pt-10 sm:pb-0 pb-4 pt-8'>
