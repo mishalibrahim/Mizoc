@@ -25,7 +25,7 @@ const NavItems = ({scroll,active}:{scroll:boolean,active:string}) => {
           href={item.href}
           onMouseEnter={() => handleHoverChange(item.id, true)}
           onMouseLeave={() => handleHoverChange(item.id, false)}
-          className={`flex-center text-black px-5 hover:bg-white ${active === item.route && 'bg-gray-500/20'} rounded-full ${scroll && 'hover:bg-gray-500/20'}`}
+          className={`flex-center text-black px-5 hover:bg-white ${active === item.route && 'bg-gray-500/20'}  rounded-full ${scroll && 'hover:bg-gray-500/20'}`}
         >
           <AnimatedText hover={hoverStates[item.id]} title={item.title} />
         </Link>
