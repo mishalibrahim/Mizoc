@@ -49,7 +49,7 @@ const Nav = () => {
                     <NavItems scroll={isScrolling} active={isActive} />
                 </nav>
                 <div className='hidden md:flex-center round-dot relative'>
-                    <Link className='flex text-black pl-3' href='contactUs'>Contact us</Link>
+                    <Link className='flex text-black pl-3' href='#contactUs'>Contact us</Link>
                 </div>
                 {/* mobile nav */}
                 <div className='flex flex-col justify-center md:hidden ' onClick={(e) => {
@@ -63,7 +63,7 @@ const Nav = () => {
                     </div>
                 </div>
             </div>
-            <MobileNav active={isOpen} />
+            <MobileNav active={isOpen} setActive={setisOpen} />
         </header>
     )
 }

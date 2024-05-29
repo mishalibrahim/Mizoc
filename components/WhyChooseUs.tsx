@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
                 </div>
                 <div className='grid-item flex flex-col'>
                 <div className='w-[60px] h-[60px]'>
-                        <Image src='/assets/images/grid-4.svg' width={60} height={60} alt='grid-1.svg'/>
+                        <Image src='/assets/images/grid-6.svg' width={60} height={60} alt='grid-1.svg'/>
                     </div>
                     <h4 className='font-medium lg:text-[24px] bg-gradient-to-r from-primary from-0% to-primary/60 to-[100%] bg-clip-text text-transparent to'> Reliability </h4>
                     <p className='font-regular text-[16px] text-black'>
@@ -53,9 +53,9 @@ const WhyChooseUs = () => {
                 </div>
                 <div className='grid-item xl:col-span-2 flex flex-col'>
                 <div className='w-[60px] h-[60px]'>
-                        <Image src='/assets/images/grid-6.svg' width={60} height={60} alt='grid-1.svg'/>
+                        <Image src='/assets/images/grid-4.svg' width={60} height={60} alt='grid-1.svg'/>
                     </div>
-                    <h4 className='font-medium lg:text-[24px] bg-gradient-to-r from-primary from-0% to-primary/60 to-[100%] bg-clip-text text-transparent to'>Quality Assurancee</h4>
+                    <h4 className='font-medium lg:text-[24px] bg-gradient-to-r from-primary from-0% to-primary/60 to-[100%] bg-clip-text text-transparent to'>Quality Assurance</h4>
                     <p className='font-normal text-[16px] text-black'>
                     We maintain rigorous quality assurance processes, ensuring consistent delivery of products and services that meet or exceed industry standards.
                     </p>

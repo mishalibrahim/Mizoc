@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="w-full h-full">
+    <main className="w-full h-full relative z-20">
       <div className="fixed h-[100vh] w-full bg-gradient-to-b from-transparent to-80% to-white top-0 z-[-10]"></div>
       <Hero />
       <OurServices />
