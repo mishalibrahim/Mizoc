@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import Link from 'next/link'
 
-const MobileNav = ({active}:{active:boolean}) => {
+const MobileNav = ({active,setActive}:{active:boolean,setActive:(value:boolean)=>void}) => {
     useGSAP(()=>{
         active ? gsap.to('#nav-open',{x:0,y:0,ease:'power2.inOut',duration:0.8,opacity:1})
                : gsap.to('#nav-open',{x:0,y:-1000,ease:'power2.inOut',duration:0.8,opacity:0})
@@ -19,7 +19,7 @@ const MobileNav = ({active}:{active:boolean}) => {
         <div className='flex justify-center h-full flex-col p-10'>
             {
                 mobileNavItems.map((item,index)=>(
-                    <Link  className='text-[36px] font-medium py-5 text-white border-b-2 nav-text opacity-0 translate-y-[-10px]' href={item.title} key={index}>{item.title}</Link>
+                    <Link onClick={()=> setActive(!active)} className='text-[36px] font-medium py-5 text-white border-b-2 nav-text opacity-0 translate-y-[-10px]' href={item.href} key={index}>{item.title}</Link>
                 ))
             }
         </div>

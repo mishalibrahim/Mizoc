@@ -5,8 +5,8 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className='relative bottom-0 rounded-t-[40px] overflow-hidden z-20 bg-gradient-to-b from-primary from-0% to-[#532753] to-100% '>
-            <div className='absolute z-[-10] h-full  bg-no-repeat bg-cover mix-blend-color-burn w-full bg-[url("/assets/images/footer-bg.svg")] bg-primary'></div>
+        <footer className='relative bottom-0 rounded-t-[40px] overflow-hidden z-20 bg-gradient-to-b from-primary from-0% to-[#532753] to-100% ' id='contactUs'>
+            {/* <div className='absolute z-[-10] h-full  bg-no-repeat bg-cover mix-blend-color-burn w-full bg-[url("/assets/images/footer-bg.svg")] bg-primary'></div> */}
             <div className='wrapper '>
                 <div className='flex justify-between sm:flex-row flex-col sm:pt-10 sm:pb-0 pb-4 pt-8'>
                     <div className='flex-1 '>
@@ -53,7 +53,7 @@ const Form = () => {
                 </label>
             </div>
             <label className='w-full max-h-[150px] h-[120px]'>
-                <textarea placeholder='About' className='form-textarea' />
+                <textarea placeholder='Enquiry' className='form-textarea' />
             </label>
             <div className='flex justify-end'>
                 <button className='w-[200px] h-[60px] rounded-[20px] border-2 border-white text-white' type='submit'>Submit</button>

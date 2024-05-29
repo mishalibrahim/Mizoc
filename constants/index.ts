@@ -8,32 +8,32 @@ export const navItems =[
     {
         id:'1',
         title:'About us',
-        href:'#aboutUs',
+        href:'#about-us',
         route:'about-us'
     },
     {
         id:'2',
         title:'Why Choose us',
-        href:'#whyChooseUs',
+        href:'#why-choose-us',
         route:'why-choose-us'
     }
 ]
 export const mobileNavItems =[
     {
         title:'Our Services',
-        href:'#ourServices'
+        href:'#our-services'
     },
     {
         title:'About us',
-        href:'#aboutUs'
+        href:'#about-us'
     },
     {
         title:'Why Choose us',
-        href:'#whyChooseUs'
+        href:'#why-choose-us'
     },
     {
         title:'Contact Us',
-        href:'#ContactUs'
+        href:'#contactUs'
     }
 
 ]
@@ -58,14 +58,10 @@ export const services = [
 export const socialLinks =[
     {
         src:'/assets/images/linkedin.png',
-        link:''
+        link:'https://www.linkedin.com/company/mizoc-llc/'
     },
     {
         src:'/assets/images/facebook.png',
-        link:'',
-    },
-    {
-        src:'/assets/images/instagram.png',
-        link:''
+        link:'https://m.facebook.com/mizocInternational',
     }
 ]
