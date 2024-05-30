@@ -62,6 +62,9 @@ export const socialLinks =[
     },
     {
         src:'/assets/images/facebook.png',
-        link:'https://m.facebook.com/mizocInternational',
+        link:'https://www.facebook.com/mizocllcfz',
+    },{
+        src:'/assets/images/whatsapp.png',
+        link:'https://wa.me/971501452837'
     }
 ]
