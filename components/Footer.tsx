@@ -3,6 +3,7 @@ import { socialLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import { useToast } from "./ui/use-toast";
 
 const Footer = () => {
   return (
@@ -49,8 +50,8 @@ const Footer = () => {
           <div className="flex sm:items-start  justify-end flex-col gap-1">
             <div className="flex  gap-2">
               <Email />
-              <Link href="mailto:sales@mizoc.ae" className="text-white">
-                sales@mizoc.ae
+              <Link href="mailto:sales@mizocae.com" className="text-white">
+                sales@mizocae.com
               </Link>
             </div>
             <div className="flex  gap-2">
@@ -69,13 +70,13 @@ const Footer = () => {
   );
 };
 const Form = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [emailData, setEmailData] = useState({
     name: "",
     email: "",
     body: "",
   });
-  console.log({ emailData });
-
+  const { toast } = useToast();
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => {
@@ -84,7 +85,14 @@ const Form = () => {
   };
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
+    if (!emailData.body || !emailData.name || !emailData.email) {
+      toast({
+        description: "Please fill in all fields.",
+      });
+      return;
+    }
     try {
+      setIsLoading(true);
       const JSONdata = JSON.stringify(emailData);
       const endpoint = "/api/send";
 
@@ -97,8 +105,26 @@ const Form = () => {
       };
 
       const response = await fetch(endpoint, options);
+
+      if (response.status === 200) {
+        toast({
+          description: "Your message has been sent.",
+        });
+        setEmailData({
+          name: "",
+          email: "",
+          body: "",
+        });
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Uh oh! Something went wrong.",
+        });
+      }
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -119,6 +145,7 @@ const Form = () => {
             placeholder="Email"
             className="form-input"
             name="email"
+            value={emailData.email}
             onChange={handleChange}
           />
         </label>
@@ -128,6 +155,7 @@ const Form = () => {
           placeholder="Enquiry"
           className="form-textarea"
           name="body"
+          value={emailData.body}
           onChange={handleChange}
         />
       </label>
@@ -135,8 +163,9 @@ const Form = () => {
         <button
           className="w-[200px] h-[60px] rounded-[20px] border-2 border-white text-white"
           type="submit"
+          disabled={isLoading}
         >
-          Submit
+          {isLoading ? "Submitting..." : "Submit"}
         </button>
       </div>
     </form>
