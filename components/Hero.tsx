@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Hero = () => {
@@ -11,7 +12,7 @@ const Hero = () => {
             <h3 className=' text-white lg:text-[8rem] md:text-[5rem] text-[3rem] font-bold'> MIZOC LLC </h3>
             <h2 className='font-medium md:text-[32px] max-w-[440px] text-[18px] text-white'> Your one-stop solutions for all energy needs.</h2>
             <div className='flex flex-col sm:flex-row sm:gap-[35px] gap-5 pt-7'>
-              <button className='sm:h-[60px] h-[50px] w-[200px] sm:w-[auto] flex-center hover:shadow-xl transition-all bg-white rounded-[40px] px-10 text-primary uppercase'>contact Us</button>
+              <Link href='#contactUs'> <button className='sm:h-[60px] h-[50px] w-[200px] sm:w-[auto] flex-center hover:shadow-xl transition-all bg-white rounded-[40px] px-10 text-primary uppercase'>contact Us</button></Link>
             </div>
           </div>
         </div>
