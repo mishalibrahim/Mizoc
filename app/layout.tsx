@@ -52,6 +52,22 @@ export default function RootLayout({
         <meta name="author" content="Mizoc LLC FZ" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Open Graph meta tags */}
+        <meta
+          property="og:title"
+          content="Top Provider of Energy Equipment & MEP Materials | Mizoc LLC FZ"
+        />
+        <meta
+          property="og:description"
+          content="Discover Mizoc LLC FZ, a leading provider of energy equipment and MEP materials in Dubai. Specializing in oil & gas and MEP sectors, we offer top-quality products, customized solutions, and exceptional customer service to clients worldwide."
+        />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/path/to/og-image.png"
+        />
+        <meta property="og:url" content="https://yourwebsite.com" />
+        <meta property="og:type" content="website" />
       </head>
       <body className={poppins.className}>
         <Nav />
