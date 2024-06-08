@@ -62,11 +62,8 @@ export default function RootLayout({
           property="og:description"
           content="Discover Mizoc LLC FZ, a leading provider of energy equipment and MEP materials in Dubai. Specializing in oil & gas and MEP sectors, we offer top-quality products, customized solutions, and exceptional customer service to clients worldwide."
         />
-        <meta
-          property="og:image"
-          content="https://yourwebsite.com/path/to/og-image.png"
-        />
-        <meta property="og:url" content="https://yourwebsite.com" />
+        <meta property="og:image" content="https://www.mizocae.com/mizoc.png" />
+        <meta property="og:url" content="https://www.mizocae.com/" />
         <meta property="og:type" content="website" />
       </head>
       <body className={poppins.className}>
