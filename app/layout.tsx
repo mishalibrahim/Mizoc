@@ -24,11 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/assets/icon/favicon.ico" />
-        <meta
-          name="description"
-          content="Discover Mizoc LLC FZ, a leading provider of energy equipment and MEP materials in Dubai. Specializing in oil & gas and MEP sectors, we offer top-quality products, customized solutions, and exceptional customer service to clients worldwide."
-        />
         <meta
           name="keywords"
           content="energy equipment, MEP materials, oil and gas equipment, MEP solutions, Dubai, Mizoc LLC FZ, drilling equipment, pipelines, valves, pumps, electrical components, HVAC systems, plumbing fixtures, insulation materials, EV products, automobile spare parts"
