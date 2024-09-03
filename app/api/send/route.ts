@@ -9,7 +9,7 @@ export async function POST(req:Request) {
     const { email, name, body } = await req.json();
     const { data, error } = await resend.emails.send({
       from: 'noreply@mizocae.com',
-      to: ['ops@mizocae.com'],
+      to: ['aadilmansoor.am@gmail.com'],
       subject: "Enquiry",
       react: EmailTemplate({ name, email, body }) as React.ReactElement,
     });
